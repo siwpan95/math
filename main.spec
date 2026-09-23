@@ -2,8 +2,9 @@
 import os
 import sys
 
+# 入口脚本：由本 spec 所在目录推导（去本地化，原硬编码绝对路径已失效）
 a = Analysis(
-    ['C:\\Users\\13122\\Desktop\\bofang\\math\\main.py'],
+    [os.path.join(SPECPATH, 'main.py')],
     pathex=[],
     binaries=[],
     datas=[(os.path.join(os.getcwd(), 'resources'), 'resources')],
